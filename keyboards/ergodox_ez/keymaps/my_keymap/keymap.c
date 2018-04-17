@@ -54,7 +54,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_RBRC,    KC_Y,   KC_U,      KC_I,      KC_O,      KC_P,       KC_BSLS,
                     KC_H,   KC_J,      KC_K,      KC_L,      KC_SCLN,    KC_ENT,
         KC_LANG1,   KC_N,   KC_M,      KC_COMM,   KC_DOT,    KC_SLSH,    KC_RSFT,
-                            KC_TRNS,   KC_TRNS,   KC_TRNS,   KC_TRNS,    KC_TRNS,
+                            KC_TRNS,   KC_TRNS,   KC_TRNS,   KC_TRNS,    MO(SYMB),
 
              KC_TRNS,  KC_TRNS,
              KC_TRNS,
@@ -63,15 +63,15 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 /* Keymap 1: Symbol Layer
  *
  * ,---------------------------------------------------.           ,--------------------------------------------------.
- * |Version  |  F1  |  F2  |  F3  |  F4  |  F5  |      |           |      |  F6  |  F7  |  F8  |  F9  |  F10 |  DELT  |
+ * |         |  F1  |  F2  |  F3  |  F4  |  F5  | F11  |           |  F12 |  F6  |  F7  |  F8  |  F9  |  F10 |  DEL   |
  * |---------+------+------+------+------+------+------|           |------+------+------+------+------+------+--------|
- * |         |   !  |   @  |   {  |   }  |   |  |      |           |      |  F11 |   7  |   8  |   9  |   *  |        |
+ * |         |   !  |   $  |   #  |  <   |   {  |      |           |      |   }  |   >  |   =  |   +  |   *  |   -    |
  * |---------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
- * |         |   #  |   $  |   (  |   )  |   `  |------|           |------|  F12 |   4  |   5  |   6  |   +  |        |
+ * |         |   "  |   '  |   `  |  @   |   [  |------|           |------|   ]  |   ?  |   ¥  |   ;  |   :  |   _    |
  * |---------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
- * |         |   %  |   ^  |   [  |   ]  |   ~  |      |           |      |   &  |   1  |   2  |   3  |   \  |        |
+ * |         |   %  |   &  |   |  |  ~   |   (  |      |           |      |   )  |   ^  |   ,  |   .  |   \  |        |
  * `---------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
- *   | EPRM  |      |      |      |      |                                       |      |    . |   0  |   =  |      |
+ *   | EPRM  |      |      |      |      |                                       |      |      |      |      |      |
  *   `-----------------------------------'                                       `----------------------------------'
  *                                        ,-------------.       ,-------------.
  *                                        |Animat|      |       |Toggle|Solid |
@@ -84,10 +84,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 // SYMBOLS
 [SYMB] = LAYOUT_ergodox(
        // left hand
-       VRSN,      KC_F1,    KC_F2,    KC_F3,    KC_F4,    KC_F5,    KC_TRNS,
-       KC_TRNS,   KC_EXLM,  KC_AT,    KC_LCBR,  KC_RCBR,  KC_PIPE,  KC_TRNS,
-       KC_TRNS,   KC_HASH,  KC_DLR,   KC_LPRN,  KC_RPRN,  KC_GRV,
-       KC_TRNS,   KC_PERC,  KC_CIRC,  KC_LBRC,  KC_RBRC,  KC_TILD,  KC_TRNS,
+       KC_TRNS,      KC_F1,    KC_F2,    KC_F3,    KC_F4,    KC_F5,    KC_F11,
+       KC_TRNS,     KC_EXLM,  KC_DLR,   KC_HASH,  KC_LABK,  KC_LCBR,  KC_TRNS,
+       KC_TRNS,     KC_DQUO,  KC_QUOT,  KC_GRV,   KC_AT,    KC_LBRC,
+       KC_TRNS,     KC_PERC,  KC_AMPR,  KC_PIPE,  KC_TILD,  KC_LPRN,  KC_TRNS,
 
           EPRM,   KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,
 
@@ -95,14 +95,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                                    KC_TRNS,
                                RGB_VAD,  RGB_VAI,  KC_TRNS,
        // right hand
-       KC_TRNS,  KC_F6,    KC_F7,  KC_F8,   KC_F9,   KC_F10,  KC_DELT,
-       KC_TRNS,  KC_F11,   KC_7,   KC_8,    KC_9,    KC_ASTR, KC_TRNS,
-                 KC_F12,   KC_4,   KC_5,    KC_6,    KC_PLUS, KC_TRNS,
-       KC_TRNS,  KC_AMPR,  KC_1,   KC_2,    KC_3,    KC_BSLS, KC_TRNS,
+       KC_F12,   KC_F6,    KC_F7,    KC_F8,    KC_F9,    KC_F10,   KC_DEL,
+       KC_TRNS,  KC_RCBR,  KC_RABK,  KC_PEQL,  KC_PLUS,  KC_ASTR,  KC_MINS,
+                 KC_RBRC,  KC_QUES,  KC_JYEN,  KC_SCLN,  KC_COLN,  KC_UNDS,
+       KC_TRNS,  KC_RPRN,  KC_CIRC,  KC_PCMM,  KC_DOT,   KC_BSLS,  KC_TRNS,
 
                          KC_TRNS, KC_DOT,  KC_0,    KC_EQL,  KC_TRNS,
-                         
-       RGB_TOG,   RGB_SLD,
+
+                  RGB_TOG,   RGB_SLD,
        KC_TRNS,
        KC_TRNS,   RGB_HUD,  RGB_HUI
 ),
