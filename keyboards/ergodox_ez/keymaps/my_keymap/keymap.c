@@ -51,7 +51,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                               KC_SPC,  KC_LALT,  MO(MDIA),
         // right hand
         KC_TRNS,    KC_6,   KC_7,      KC_8,      KC_9,      KC_0,       KC_BSPC,
-        KC_RBRC,    KC_Y,   KC_U,      KC_I,      KC_O,      KC_P,       KC_NUBS,
+        KC_RBRC,    KC_Y,   KC_U,      KC_I,      KC_O,      KC_P,       KC_BSLS,
                     KC_H,   KC_J,      KC_K,      KC_L,      KC_SCLN,    KC_ENT,
         KC_LANG1,   KC_N,   KC_M,      KC_COMM,   KC_DOT,    KC_SLSH,    KC_RSFT,
                             KC_TRNS,   KC_TRNS,   KC_TRNS,   KC_TRNS,    MO(SYMB),
@@ -98,7 +98,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
        KC_F12,   KC_F6,    KC_F7,    KC_F8,    KC_F9,    KC_F10,   KC_DEL,
        KC_TRNS,  KC_RCBR,  KC_RABK,  KC_PEQL,  KC_PLUS,  KC_ASTR,  KC_MINS,
                  KC_RBRC,  KC_QUES,  KC_JYEN,  KC_SCLN,  KC_COLN,  KC_UNDS,
-       KC_TRNS,  KC_RPRN,  KC_CIRC,  KC_PCMM,  KC_DOT,   KC_NUBS,  KC_TRNS,
+       KC_TRNS,  KC_RPRN,  KC_CIRC,  KC_PCMM,  KC_DOT,   KC_BSLS,  KC_TRNS,
 
                          KC_TRNS, KC_DOT,  KC_0,    KC_EQL,  KC_TRNS,
 
