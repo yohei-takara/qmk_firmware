@@ -12,3 +12,10 @@ $ docker run -e keymap=my_keymap -e keyboard=ergodox_ez --rm -v $('pwd'):/qmk:rw
 $ qmk_firmware/.build/***.hex
 ```
 
+# 書き込みツール
+
+teensy
+
+```aidl
+$ brew cask install teensy
+```
